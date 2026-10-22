@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://blockchain-erleben.netlify.app/ -->
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=ba3cfcf1-8b09-470c-8be7-f5062e2b969f
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projekte | Blockchain-Schaufensterregion Mittweida</title>
+<meta name="description" content="Interaktive Projektübersicht der Blockchain-Schaufensterregion Mittweida">
+<meta name="theme-color" content="#164f86">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="images/site-icon-512.png">
+<meta name="twitter:image" content="images/site-icon-512.png">
+<style>
+:root{
+  --blue:#164f86;
+  --blue2:#2f78b7;
+  --sky:#eef6fb;
+  --ink:#173047;
+  --text:#2f475a;
+  --muted:#71889a;
+  --line:#dce8f0;
+  --white:#ffffff;
+  --green:#54a677;
+  --red:#c95d6c;
+  --yellow:#d8a935;
+  --violet:#746bb5;
+  --max:1420px;
+  --shadow:0 14px 38px rgba(27,73,108,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  background:#f7fbfd;
+  color:var(--text);
+}
+a{color:inherit}
+.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
+header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+nav{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px
+}
+.brand{
+  font-size:1.02rem;font-weight:800;letter-spacing:.02em;color:var(--blue)
+}
+.brand span{color:#58a5d7}
+.nav-chip{
+  font-size:.83rem;color:var(--blue);
+  background:var(--sky);padding:9px 14px;border-radius:5px
+}
+.hero{
+  position:relative;overflow:hidden;
+  padding:86px 0 70px;
+  background:linear-gradient(135deg,#fff 0%,#f3f9fc 55%,#e7f3f9 100%);
+  border-bottom:1px solid var(--line)
+}
+.hero:after{
+  content:"";position:absolute;right:-120px;top:-180px;width:560px;height:560px;
+  border-radius:50%;border:88px solid rgba(47,120,183,.06)
+}
+.hero-grid{
+  position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;
+  gap:70px;align-items:center
+}
+.kicker{
+  color:var(--blue2);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase
+}
+h1{
+  color:var(--blue);font-size:clamp(2.9rem,5.7vw,5.6rem);
+  line-height:.96;letter-spacing:-.045em;margin:17px 0 24px;max-width:980px
+}
+.hero p{
+  max-width:780px;font-size:1.14rem;line-height:1.7;color:#536d81;margin:0
+}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{
+  min-height:122px;background:#fff;border:1px solid var(--line);
+  border-radius:10px;padding:23px;box-shadow:0 6px 24px rgba(38,79,109,.06)
+}
+.stat b{display:block;color:var(--blue);font-size:2.3rem;margin-bottom:7px}
+.stat span{color:var(--muted);font-size:.86rem}
+.controls-wrap{
+  position:sticky;top:76px;z-index:30;
+  padding:20px 0;background:rgba(247,251,253,.95);
+  backdrop-filter:blur(12px);border-bottom:1px solid rgba(220,232,240,.8)
+}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:260px;position:relative}
+.search:before{
+  content:"⌕";position:absolute;left:14px;top:8px;font-size:1.45rem;color:#85a0b3
+}
+.search input{
+  width:100%;border:1px solid #cfdfe9;background:#fff;color:var(--ink);
+  border-radius:7px;padding:13px 14px 13px 42px;font-size:.95rem;outline:none
+}
+.search input:focus{border-color:var(--blue2);box-shadow:0 0 0 3px rgba(47,120,183,.10)}
+.filter-btn{
+  border:1px solid #cfdfe9;background:#fff;color:#476276;
+  padding:11px 14px;border-radius:7px;cursor:pointer;font-weight:700;font-size:.82rem
+}
+.filter-btn:hover,.filter-btn.active{
+  background:var(--blue);border-color:var(--blue);color:#fff
+}
+.project-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;padding:36px 0 70px
+}
+.project-card{
+  background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  box-shadow:0 7px 24px rgba(30,75,107,.06);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+  min-width:0
+}
+.project-card:hover{
+  transform:translateY(-4px);box-shadow:var(--shadow);border-color:#c4dce9
+}
+.visual{
+  height:155px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)
+}
+.visual.blue{background:linear-gradient(135deg,#165584,#2f83ba)}
+.visual.green{background:linear-gradient(135deg,#3f8e67,#6ebd87)}
+.visual.red{background:linear-gradient(135deg,#a94d5c,#d8717d)}
+.visual.yellow{background:linear-gradient(135deg,#c69628,#e7bc4d)}
+.visual.violet{background:linear-gradient(135deg,#5f5aa5,#8d82c8)}
+.mesh{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 22% 25%,rgba(255,255,255,.18) 0 2px,transparent 3px),
+    linear-gradient(120deg,transparent 0 46%,rgba(255,255,255,.09) 47% 48%,transparent 49%);
+  background-size:38px 38px,100% 100%;
+  opacity:.65
+}
+.icon{
+  position:absolute;right:22px;bottom:14px;font-size:3.9rem;
+  filter:drop-shadow(0 8px 14px rgba(0,0,0,.14))
+}
+.mini-label{
+  position:absolute;left:17px;top:16px;background:rgba(255,255,255,.94);
+  color:#284b63;padding:7px 10px;border-radius:4px;font-size:.71rem;font-weight:800
+}
+.card-body{padding:22px}
+.meta-row{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.status{
+  padding:6px 8px;border-radius:4px;font-size:.69rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.05em
+}
+.status.live{background:#e6f5eb;color:#32734f}
+.status.done{background:#eef3f6;color:#61788b}
+.period{font-size:.78rem;color:var(--muted)}
+.eyebrow{
+  margin:17px 0 7px;color:var(--blue2);font-size:.74rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.06em
+}
+h3{
+  margin:0 0 13px;color:var(--ink);font-size:1.45rem;line-height:1.18;
+  letter-spacing:-.025em
+}
+.desc{margin:0 0 20px;line-height:1.6;color:#526b7e;font-size:.94rem}
+.contact{
+  display:flex;gap:12px;align-items:flex-start;padding-top:17px;border-top:1px solid var(--line)
+}
+.avatar{
+  width:42px;height:42px;flex:0 0 auto;border-radius:50%;
+  display:grid;place-items:center;background:var(--sky);color:var(--blue);
+  border:1px solid #d5e8f3;font-weight:800;font-size:.76rem
+}
+.contact div:last-child{display:flex;flex-direction:column;gap:3px;min-width:0}
+.contact strong{color:var(--ink);font-size:.92rem}
+.contact span,.contact a{font-size:.79rem;color:var(--muted);word-break:break-word}
+.contact a:hover{color:var(--blue)}
+details{margin-top:15px;padding-top:13px;border-top:1px solid var(--line)}
+summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;
+  color:#476276;font-size:.83rem;font-weight:800
+}
+summary::-webkit-details-marker{display:none}
+.details-body{color:#61788b;font-size:.83rem;line-height:1.55}
+.project-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+  padding:10px 13px;border-radius:6px;text-decoration:none;
+  background:var(--blue);border:1px solid var(--blue);color:#fff;
+  font-size:.82rem;font-weight:800;transition:.2s background,.2s border-color
+}
+.project-link:hover{background:var(--blue2);border-color:var(--blue2)}
+.no-results{display:none;text-align:center;padding:80px 0;color:var(--muted)}
+.source-note{
+  margin:0 0 45px;padding:18px 20px;border:1px solid var(--line);
+  background:#fff;border-radius:8px;color:#71889a;font-size:.82rem;line-height:1.55
+}
+footer{
+  background:#153f65;color:#d7e5ef;border-top:1px solid #0e3557;
+  padding:34px 0 48px;font-size:.86rem
+}
+@media(max-width:1080px){
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  nav{height:66px}.controls-wrap{top:66px}.nav-chip{display:none}
+  .wrap{width:min(var(--max),calc(100% - 22px))}
+  .hero{padding:58px 0 48px}
+  .stats{grid-template-columns:1fr 1fr}
+  .project-grid{grid-template-columns:1fr;padding-top:24px}
+}
+
+.info-sections{
+  width:min(var(--max),calc(100% - 42px));margin:0 auto 70px;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:22px
+}
+.info-card{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  box-shadow:0 7px 24px rgba(30,75,107,.06);padding:28px
+}
+.info-card h2{margin:0 0 8px;color:var(--blue);font-size:1.65rem;letter-spacing:-.02em}
+.info-card h3{margin:22px 0 8px;color:var(--ink);font-size:1rem}
+.info-card p{margin:0 0 12px;line-height:1.6;color:#566f82}
+.contact-form{display:grid;gap:12px;margin-top:18px}
+.contact-form label{font-size:.8rem;font-weight:800;color:#476276}
+.contact-form input,.contact-form textarea{
+  width:100%;border:1px solid #cfdfe9;background:#fff;color:var(--ink);
+  border-radius:7px;padding:12px 13px;font:inherit;outline:none
+}
+.contact-form textarea{min-height:150px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{
+  border-color:var(--blue2);box-shadow:0 0 0 3px rgba(47,120,183,.10)
+}
+.contact-form button{
+  width:max-content;border:0;background:var(--blue);color:#fff;
+  padding:11px 17px;border-radius:6px;font-weight:800;cursor:pointer
+}
+.contact-form button:hover{background:var(--blue2)}
+.notice{
+  margin-top:14px;padding:12px 14px;border-radius:7px;background:var(--sky);
+  color:#61788b;font-size:.8rem;line-height:1.5
+}
+.legal-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.legal-links a{
+  text-decoration:none;color:var(--blue);font-weight:800;font-size:.84rem
+}
+.legal-links a:hover{text-decoration:underline}
+.footer-row{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap
+}
+.footer-main{font-weight:700}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+.footer-links a{color:#d7e5ef;text-decoration:none}
+.footer-links a:hover{text-decoration:underline}
+@media(max-width:900px){.info-sections{grid-template-columns:1fr}}
+
+
+.header-logo-link{display:flex;align-items:center;text-decoration:none}
+.header-logo{height:54px;width:auto;display:block}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.nav-link{
+  font-size:.83rem;font-weight:800;color:var(--blue);text-decoration:none;
+  padding:9px 12px;border-radius:6px
+}
+.nav-link:hover{background:var(--sky)}
+.funding-wrap{
+  border-top:1px solid rgba(255,255,255,.16);
+  margin-top:24px;padding-top:24px;
+  display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center
+}
+.funding-logo{
+  width:140px;max-width:100%;height:auto;background:#fff;
+  padding:10px;border-radius:6px
+}
+.funding-text{max-width:920px;line-height:1.55;color:#d7e5ef;font-size:.86rem}
+@media(max-width:680px){
+  .header-logo{height:44px}
+  .nav-actions .nav-chip{display:none}
+  .funding-wrap{grid-template-columns:1fr}
+  .funding-logo{width:130px}
+}
+
+
+.tabbar-wrap{
+  background:#fff;border-bottom:1px solid var(--line);position:sticky;top:76px;z-index:35
+}
+.tabbar{
+  display:flex;gap:8px;align-items:center;padding:10px 0
+}
+.tab-btn{
+  border:0;background:transparent;color:#5f788a;font-weight:800;font-size:.88rem;
+  padding:10px 14px;border-radius:6px;cursor:pointer
+}
+.tab-btn:hover{background:var(--sky);color:var(--blue)}
+.tab-btn.active{background:var(--blue);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.partner-tab .partner-hero{
+  padding:72px 0 50px;background:linear-gradient(135deg,#fff 0%,#f3f9fc 60%,#e7f3f9 100%);
+  border-bottom:1px solid var(--line)
+}
+.partner-tab .partner-kicker{
+  color:var(--blue2);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase
+}
+.partner-tab .partner-title{
+  color:var(--blue);font-size:clamp(2.7rem,6vw,5.2rem);line-height:.98;letter-spacing:-.045em;
+  margin:16px 0 20px
+}
+.partner-tab .partner-lead{
+  max-width:850px;font-size:1.12rem;line-height:1.7;color:#536d81
+}
+.partner-tab .partner-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:42px 0
+}
+.partner-tab .partner-card{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;
+  box-shadow:0 8px 25px rgba(30,75,107,.07)
+}
+.partner-tab .partner-logo-box{
+  height:130px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  padding:14px;background:#fff;border:1px solid #edf3f7;border-radius:8px
+}
+.partner-tab .partner-logo-box img{max-width:100%;max-height:100px;object-fit:contain}
+.partner-tab .partner-card h2{margin:0 0 8px;color:var(--ink);font-size:1.35rem}
+.partner-tab .partner-card p{line-height:1.6;color:#5c7385;margin:0 0 12px}
+.partner-tab .partner-more{display:inline-flex;margin-top:8px;color:var(--blue);font-weight:800;text-decoration:none}
+.partner-tab .partner-more:hover{text-decoration:underline}
+.partner-tab .partner-mission{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px;margin-bottom:50px
+}
+.partner-tab .partner-mission h2{color:var(--blue);margin-top:0}
+.partner-tab .partner-mission p{line-height:1.7;color:#536d81}
+@media(max-width:900px){
+  .partner-tab .partner-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .tabbar-wrap{top:66px}
+  .tabbar{overflow-x:auto}
+}
+
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="header-logo-link" href="https://blockchain-mittweida.com/" target="_blank" rel="noopener" aria-label="Blockchain Schaufensterregion Mittweida">
+    <img class="header-logo" src="images/logo-BSRM-ger-block-color_1.png" alt="Blockchain Schaufensterregion Mittweida">
+  </a>
+  <div class="nav-actions">
+      <div class="nav-chip">Projekte 2020 bis 2026</div>
+    </div>
+</nav></div></header>
+
+<main>
+
+<div class="tabbar-wrap">
+  <div class="wrap tabbar">
+    <button class="tab-btn active" data-tab="projekte">Projekte</button>
+    <button class="tab-btn" data-tab="partner">Partner</button>
+  </div>
+</div>
+
+<div id="tab-projekte" class="tab-panel active">
+
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="kicker">Blockchain-Schaufensterregion Mittweida</div>
+    <h1>Blockchain aus Mittweida. Projekte mit praktischem Nutzen.</h1>
+    <p>Hier finden Sie die Projekte der Blockchain Schaufensterregion Mittweida aus Energie, Finanzwesen, Industrie, Bildung und digitaler Infrastruktur. Zu jedem Projekt sehen Sie Laufzeit, Inhalt, Projektleitung, Kontakt und beteiligte Partner.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>24</b><span>Projekte</span></div>
+    <div class="stat"><b>3</b><span>laufende Projekte</span></div>
+    <div class="stat"><b>5</b><span>Themenfelder</span></div>
+    <div class="stat"><b>2026</b><span>Stand der Übersicht</span></div>
+  </div>
+</div></section>
+
+<section class="controls-wrap"><div class="wrap controls">
+  <div class="search"><input id="search" placeholder="Projekt, Person oder Partner suchen …"></div>
+  <button class="filter-btn active" data-category="all">Alle</button>
+  <button class="filter-btn" data-status="Laufend">Laufend</button>
+  <button class="filter-btn" data-status="Abgeschlossen">Abgeschlossen</button>
+  <button class="filter-btn" data-category="Bildung &amp; Enablement">Bildung &amp; Enablement</button>
+<button class="filter-btn" data-category="Digitale Vertrauensinfrastruktur">Digitale Vertrauensinfrastruktur</button>
+<button class="filter-btn" data-category="Energie &amp; Nachhaltigkeit">Energie &amp; Nachhaltigkeit</button>
+<button class="filter-btn" data-category="Finanz- &amp; Zahlungsinfrastruktur">Finanz- &amp; Zahlungsinfrastruktur</button>
+<button class="filter-btn" data-category="Industrie &amp; digitale Services">Industrie &amp; digitale Services</button>
+</div></section>
+
+<section class="wrap">
+<div class="project-grid" id="grid">
+
+    <article class="project-card" data-status="Laufend" data-category="Energie &amp; Nachhaltigkeit" data-search="bbbio – blockchain-basierter biomassenachweis vom biogas bis zum herkunftsnachweis: blockchain macht biomasse transparent dr. volker wannack hochschule mittweida hochschule mittweida; ökotec-biogas gmbh &amp; co. kg – andré kollai hochschule mittweida: jonathan osswald, christoph frenzel, klins bitanji">
+      <div class="visual green">
+        <div class="mesh"></div>
+        <span class="icon">🌱</span>
+        <span class="mini-label">Energie &amp; Nachhaltigkeit</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status live">Laufend</span>
+          <span class="period">06/2025–08/2026</span>
+        </div>
+        <p class="eyebrow">BBBio – Blockchain-basierter Biomassenachweis</p>
+        <h3>Biomasse nachvollziehbar dokumentieren</h3>
+        <p class="desc">Das Projekt entwickelt digitale Nachweise für Herkunft, Verarbeitung und Nachhaltigkeit von Biomasse. Grundlage ist eine Blockchain Lösung, die bestehende Nachweisverfahren ergänzen und vereinfachen soll.</p>
+        <div class="contact">
+          <div class="avatar">VW</div>
+          <div>
+            <strong>Dr. Volker Wannack</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:wannack@hs-mittweida.de">wannack@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; Ökotec-Biogas GmbH &amp; Co. KG – André Kollai</p>
+            <p>Hochschule Mittweida: Jonathan Osswald, Christoph Frenzel, Klins Bitanji</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/bbbio" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+        <a class="project-link" href="https://youtu.be/DC7ZOOz6Pvo" target="_blank" rel="noopener">
+          Projektvideo ansehen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Bildung &amp; Enablement" data-search="bcam – bc &amp; distributed ledger technologies academy mw blockchain verstehen statt nur darüber reden: die digitale academy aus mittweida mario oettler hochschule mittweida hochschule mittweida bcam bietet digitale aus und weiterbildung zu blockchain und distributed ledger technologien. zum projekt gehört eine prototypische blockchainbasierte lern-dao als online-lern- und ressourcenplattform. die lernplattform wird auch für weitere angebote wie bolt genutzt.">
+      <div class="visual yellow">
+        <div class="mesh"></div>
+        <span class="icon">🎓</span>
+        <span class="mini-label">Bildung &amp; Enablement</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">10/2020–09/2023</span>
+        </div>
+        <p class="eyebrow">BCAM – BC &amp; Distributed Ledger Technologies Academy MW</p>
+        <h3>Blockchain Wissen für Studium, Beruf und Praxis</h3>
+        <p class="desc">BCAM bietet digitale Aus und Weiterbildung zu Blockchain und Distributed Ledger Technologien. Zum Projekt gehört eine prototypische blockchainbasierte Lern-DAO als Online-Lern- und Ressourcenplattform. Die Lernplattform wird auch für weitere Angebote wie BOLT genutzt.</p>
+        <div class="contact">
+          <div class="avatar">MO</div>
+          <div>
+            <strong>Mario Oettler</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:oettler@hs-mittweida.de">oettler@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/bcam" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Digitale Vertrauensinfrastruktur" data-search="blockchain based decentralized storage cloud ohne zentrale cloud: daten sicher und dezentral speichern mario oettler hochschule mittweida / bccm hochschule mittweida / bccm">
+      <div class="visual blue">
+        <div class="mesh"></div>
+        <span class="icon">🗄️</span>
+        <span class="mini-label">Digitale Vertrauensinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">Blockchain based Decentralized Storage</p>
+        <h3>Daten dezentral und sicher speichern</h3>
+        <p class="desc">Entwickelt wird ein dezentraler Speicherdienst für sichere und vertrauliche Datenhaltung. Dazu gehören Verschlüsselung, Zugriffskontrolle und Schutz vor nachträglicher Veränderung.</p>
+        <div class="contact">
+          <div class="avatar">MO</div>
+          <div>
+            <strong>Mario Oettler</strong>
+            <span>Hochschule Mittweida / BCCM</span>
+            <a href="mailto:oettler@hs-mittweida.de">oettler@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida / BCCM</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/decentralized-storage" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Bildung &amp; Enablement" data-search="bolt der blockchain-tutor mit ki: wissen fragen statt suchen mario oettler hochschule mittweida hochschule mittweida / bcam; kooperation u. a. mit dem landesamt für steuern und finanzen sachsen">
+      <div class="visual violet">
+        <div class="mesh"></div>
+        <span class="icon">🤖</span>
+        <span class="mini-label">Bildung &amp; Enablement</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">BOLT</p>
+        <h3>Blockchain Wissen direkt im Dialog</h3>
+        <p class="desc">BOLT ist ein digitaler Lerntutor für Blockchain Themen. Die Anwendung wurde als WordPress Plugin umgesetzt und kann in die Blockchain Academy Mittweida eingebunden werden.</p>
+        <div class="contact">
+          <div class="avatar">MO</div>
+          <div>
+            <strong>Mario Oettler</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:oettler@hs-mittweida.de">oettler@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida / BCAM; Kooperation u. a. mit dem Landesamt für Steuern und Finanzen Sachsen</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/bolt" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Bildung &amp; Enablement" data-search="breitenkompetenz blockchain blockchain für alle: zukunftstechnologie verständlich gemacht dr. philipp ramin innovationszentrum für industrie 4.0 regensburg innovationszentrum für industrie 4.0 regensburg; volksbank mittweida – miriam stareprawo-hofmann">
+      <div class="visual yellow">
+        <div class="mesh"></div>
+        <span class="icon">💡</span>
+        <span class="mini-label">Bildung &amp; Enablement</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">11/2020–10/2021</span>
+        </div>
+        <p class="eyebrow">Breitenkompetenz Blockchain</p>
+        <h3>Blockchain verständlich erklärt</h3>
+        <p class="desc">Das Projekt vermittelt Grundlagen und Einsatzmöglichkeiten der Blockchain Technologie an Bevölkerung und Unternehmen.</p>
+        <div class="contact">
+          <div class="avatar">PR</div>
+          <div>
+            <strong>Dr. Philipp Ramin</strong>
+            <span>Innovationszentrum für Industrie 4.0 Regensburg</span>
+            <a href="mailto:philipp@i40.de">philipp@i40.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Innovationszentrum für Industrie 4.0 Regensburg; Volksbank Mittweida – Miriam Stareprawo-Hofmann</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/breitenkompetenz-blockchain" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Energie &amp; Nachhaltigkeit" data-search="bridger solarstrom fair teilen: der virtuelle zähler fürs mehrfamilienhaus rené härtel ifem / hochschule mittweida ifem – hochschule mittweida; exceeding solutions gmbh – oliver punk hochschule mittweida / ifem: max hauswald, felix richter">
+      <div class="visual green">
+        <div class="mesh"></div>
+        <span class="icon">☀️</span>
+        <span class="mini-label">Energie &amp; Nachhaltigkeit</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2024–12/2024</span>
+        </div>
+        <p class="eyebrow">BRIDGER</p>
+        <h3>Solarstrom im Mehrfamilienhaus einfach abrechnen</h3>
+        <p class="desc">BRIDGER untersucht virtuelle Zählerregister und Blockchain Technik für die Abrechnung lokaler Energieflüsse und neuer Mieterstrommodelle.</p>
+        <div class="contact">
+          <div class="avatar">RH</div>
+          <div>
+            <strong>René Härtel</strong>
+            <span>ifem / Hochschule Mittweida</span>
+            <a href="mailto:haertel1@hs-mittweida.de">haertel1@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>ifem – Hochschule Mittweida; exceeding solutions GmbH – Oliver Punk</p>
+            <p>Hochschule Mittweida / ifem: Max Hauswald, Felix Richter</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/bridger" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Digitale Vertrauensinfrastruktur" data-search="chainlock der schlüssel liegt auf der blockchain: smart locks ohne zentrale abhängigkeit prof. dr. matthias vodel hochschule mittweida hochschule mittweida; abus pfaffenhain gmbh – sebastian müller hochschule mittweida: richard vogel">
+      <div class="visual blue">
+        <div class="mesh"></div>
+        <span class="icon">🔐</span>
+        <span class="mini-label">Digitale Vertrauensinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">05/2023–04/2025</span>
+        </div>
+        <p class="eyebrow">Chainlock</p>
+        <h3>Digitale Schließsysteme sicher verwalten</h3>
+        <p class="desc">Chainlock entwickelt ein digitales Schließsystem, bei dem Zugangsregeln über eine Blockchain abgesichert werden. Das System soll auch bei eingeschränkter Netzanbindung zuverlässig funktionieren.</p>
+        <div class="contact">
+          <div class="avatar">MV</div>
+          <div>
+            <strong>Prof. Dr. Matthias Vodel</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:vodel@hs-mittweida.de">vodel@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; ABUS Pfaffenhain GmbH – Sebastian Müller</p>
+            <p>Hochschule Mittweida: Richard Vogel</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/chainlock" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Finanz- &amp; Zahlungsinfrastruktur" data-search="crypto as a service (caas) krypto für banken – ohne eigene krypto-infrastruktur thomas otto volksbank mittweida eg volksbank mittweida eg; v-bank ag – raphael neuberger, hannes claut, marvin blaich volksbank mittweida: joshua ender">
+      <div class="visual red">
+        <div class="mesh"></div>
+        <span class="icon">🏦</span>
+        <span class="mini-label">Finanz- &amp; Zahlungsinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">Crypto as a Service (CaaS)</p>
+        <h3>Digitale Assets als Service für Banken</h3>
+        <p class="desc">Das Projekt entwickelt ein Servicemodell für Verwahrung, Handel und weitere Leistungen rund um digitale Assets. Zielgruppe sind vor allem kleinere und mittlere Kreditinstitute.</p>
+        <div class="contact">
+          <div class="avatar">TO</div>
+          <div>
+            <strong>Thomas Otto</strong>
+            <span>Volksbank Mittweida eG</span>
+            <a href="mailto:thomas.otto@vb-mittweida.de">thomas.otto@vb-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Volksbank Mittweida eG; V-Bank AG – Raphael Neuberger, Hannes Claut, Marvin Blaich</p>
+            <p>Volksbank Mittweida: Joshua Ender</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/caas/" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Finanz- &amp; Zahlungsinfrastruktur" data-search="csi – community supported insurance versicherung neu gedacht: risiken gemeinsam und dezentral absichern lucas johns hochschule mittweida hochschule mittweida – tim käbisch; etherisc gmbh – christoph mussenbrock">
+      <div class="visual red">
+        <div class="mesh"></div>
+        <span class="icon">🛡️</span>
+        <span class="mini-label">Finanz- &amp; Zahlungsinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">09/2021–10/2023</span>
+        </div>
+        <p class="eyebrow">CSI – Community Supported Insurance</p>
+        <h3>Risiken gemeinschaftlich absichern</h3>
+        <p class="desc">CSI untersucht eine gemeinschaftliche Risikoabsicherung auf Blockchain Basis. Im Projekt wurden Demonstratoren und Pilotphasen umgesetzt.</p>
+        <div class="contact">
+          <div class="avatar">LJ</div>
+          <div>
+            <strong>Lucas Johns</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:johns@hs-mittweida.de">johns@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida – Tim Käbisch; Etherisc GmbH – Christoph Mussenbrock</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/csi" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Finanz- &amp; Zahlungsinfrastruktur" data-search="dienstleistungskonsortium für tokenemission vom wertpapier zum token: eine region baut infrastruktur für digitale assets grit zimmer volksbank mittweida eg volksbank mittweida eg; weitere dienstleistungs- und rechtspartner">
+      <div class="visual red">
+        <div class="mesh"></div>
+        <span class="icon">🪙</span>
+        <span class="mini-label">Finanz- &amp; Zahlungsinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">10/2020–06/2022</span>
+        </div>
+        <p class="eyebrow">Dienstleistungskonsortium für Tokenemission</p>
+        <h3>Tokenemission aus einer Hand</h3>
+        <p class="desc">Das Projekt bündelt Dienstleistungen für Unternehmen, die Wertpapiere über Blockchain Technik ausgeben möchten.</p>
+        <div class="contact">
+          <div class="avatar">GZ</div>
+          <div>
+            <strong>Grit Zimmer</strong>
+            <span>Volksbank Mittweida eG</span>
+            <a href="mailto:grit.zimmer@vb-mittweida.de">grit.zimmer@vb-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Volksbank Mittweida eG – Grit Zimmer (grit.zimmer@vb-mittweida.de), Thomas Otto (thomas.otto@vb-mittweida.de); weitere Dienstleistungs- und Rechtspartner</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/dienstleistungskonsortium-fuer-tokenemission" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Digitale Vertrauensinfrastruktur" data-search="echt! – electronic certificate hashing technology zeugnisse, die man nicht fälschen kann: vertrauen per blockchain jacob friedrich quadrio beratungsgesellschaft mbh quadrio beratungsgesellschaft mbh; hochschule mittweida – arno pfefferling, patrick kehling">
+      <div class="visual blue">
+        <div class="mesh"></div>
+        <span class="icon">📜</span>
+        <span class="mini-label">Digitale Vertrauensinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">12/2020–02/2023</span>
+        </div>
+        <p class="eyebrow">ECHT! – Electronic Certificate Hashing Technology</p>
+        <h3>Zeugnisse digital und fälschungssicher prüfen</h3>
+        <p class="desc">ECHT! ermöglicht die digitale Speicherung und Prüfung von Zeugnissen, Zertifikaten und Urkunden mit Blockchain Technik.</p>
+        <div class="contact">
+          <div class="avatar">JF</div>
+          <div>
+            <strong>Jacob Friedrich</strong>
+            <span>QuadriO Beratungsgesellschaft mbH</span>
+            <a href="mailto:jacob.friedrich@quadrio.de">jacob.friedrich@quadrio.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>QuadriO Beratungsgesellschaft mbH; Hochschule Mittweida – Arno Pfefferling, Patrick Kehling</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/echt" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Digitale Vertrauensinfrastruktur" data-search="evoting digital wählen – geheim, nachvollziehbar und manipulationssicher mario oettler hochschule mittweida hochschule mittweida; volksbank mittweida; vr-networld – henrik schäfer hochschule mittweida: alex kemloh, nomana majeed; volksbank mittweida: miriam stareprawo-hofmann, joshua ender">
+      <div class="visual blue">
+        <div class="mesh"></div>
+        <span class="icon">🗳️</span>
+        <span class="mini-label">Digitale Vertrauensinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">10/2021–03/2024</span>
+        </div>
+        <p class="eyebrow">eVoting</p>
+        <h3>Digital abstimmen mit überprüfbarer Sicherheit</h3>
+        <p class="desc">eVoting untersucht ein elektronisches Wahl und Abstimmungssystem auf Blockchain Basis. Im Mittelpunkt stehen Anonymität, Nachvollziehbarkeit und Schutz vor Manipulation.</p>
+        <div class="contact">
+          <div class="avatar">MO</div>
+          <div>
+            <strong>Mario Oettler</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:oettler@hs-mittweida.de">oettler@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; Volksbank Mittweida; VR-NetWorld – Henrik Schäfer</p>
+            <p>Hochschule Mittweida: Alex Kemloh, Nomana Majeed; Volksbank Mittweida: Miriam Stareprawo-Hofmann, Joshua Ender</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/evoting" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Laufend" data-category="Industrie &amp; digitale Services" data-search="flexsmart-dp nutzungsrechte flexible preisgestaltung rené schmitt sportfreunde gahlenz flogtoof volker wannack hochschule mittweida">
+      <div class="visual violet">
+        <div class="mesh"></div>
+        <span class="icon">🎟️</span>
+        <span class="mini-label">Industrie &amp; digitale Services</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status live">Laufend</span>
+          <span class="period">10/2025–09/2026</span>
+        </div>
+        <p class="eyebrow">FlexSmart-DP</p>
+        <h3>Nutzungsrechte flexibel teilen und handeln</h3>
+        <p class="desc">FlexSmart DP untersucht tokenisierte Nutzungs und Zugangsrechte sowie flexible Preisgestaltung, zum Beispiel für Sport und Tourismus.</p>
+        <div class="contact">
+          <div class="avatar">RS</div>
+          <div>
+            <strong>René Schmitt</strong>
+            <span>FLOGTOOF UNITED UG · Sportfreunde Gahlenz e. V.</span>
+            <span>Am Golfplatz 1 · 09569 Gahlenz</span>
+            <a href="mailto:rene@flogtoof.de">rene@flogtoof.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Sportfreunde Gahlenz e. V. – René Schmitt, Am Golfplatz 1, 09569 Gahlenz, rene@flogtoof.de; Hochschule Mittweida – Dr. Volker Wannack (Administration, wannack@hs-mittweida.de); FLOGTOOF UNITED UG – René Schmitt</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/flexsmart-dp" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+        <a class="project-link" href="https://www.youtube.com/watch?v=LX4lGNLQfIs" target="_blank" rel="noopener">
+          Projektvideo ansehen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Digitale Vertrauensinfrastruktur" data-search="iwceid – interoperable web3 credentials &amp; eid integration der personalausweis trifft web3: eine identität für die digitale welt michael meisel hochschule mittweida hochschule mittweida; authada gmbh – patrick hille hochschule mittweida: jonas benke">
+      <div class="visual blue">
+        <div class="mesh"></div>
+        <span class="icon">🪪</span>
+        <span class="mini-label">Digitale Vertrauensinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">05/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">IWCeID – Interoperable Web3 Credentials &amp; eID Integration</p>
+        <h3>Digitale Identität mit eID und Web3 verbinden</h3>
+        <p class="desc">IWCeID verbindet die eID Funktion des Personalausweises mit digitalen Identitätslösungen und Blockchain Technik. Dazu gehören Anwendungen für Identifikation und digitale Signaturen.</p>
+        <div class="contact">
+          <div class="avatar">MM</div>
+          <div>
+            <strong>Michael Meisel</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:meisel@hs-mittweida.de">meisel@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; AUTHADA GmbH – Patrick Hille</p>
+            <p>Hochschule Mittweida: Jonas Benke</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/iwceid" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Finanz- &amp; Zahlungsinfrastruktur" data-search="krywert wenn forderungen programmierbar werden: wertpapiere treffen smart contracts matthias kramer / prof. dr. tobias teich splainx gmbh / westsächsische hochschule zwickau splainx gmbh; westsächsische hochschule zwickau">
+      <div class="visual red">
+        <div class="mesh"></div>
+        <span class="icon">📈</span>
+        <span class="mini-label">Finanz- &amp; Zahlungsinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2022–12/2022</span>
+        </div>
+        <p class="eyebrow">KryWert</p>
+        <h3>Zahlungsansprüche digital abbilden und steuern</h3>
+        <p class="desc">KryWert untersucht die digitale Abbildung und Steuerung von Zahlungsansprüchen mit Smart Contracts und Kryptowertpapieren.</p>
+        <div class="contact">
+          <div class="avatar">MK</div>
+          <div>
+            <strong>Matthias Kramer / Prof. Dr. Tobias Teich</strong>
+            <span>splainX GmbH / Westsächsische Hochschule Zwickau</span>
+            <a href="mailto:m.kramer@splainx.com">m.kramer@splainx.com</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>splainX GmbH; Westsächsische Hochschule Zwickau</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/krywert" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Bildung &amp; Enablement" data-search="lcbit – low-code blockchain integration toolkit blockchain per baukasten: anwendungen bauen ohne blockchain-spezialist zu sein dr. burkhard heisen / erik neumann heisenware gmbh / hochschule mittweida heisenware gmbh; hochschule mittweida; tu chemnitz – prof. dr. matthias thürer, pierre grzona hochschule mittweida: klins bitanji">
+      <div class="visual yellow">
+        <div class="mesh"></div>
+        <span class="icon">🧩</span>
+        <span class="mini-label">Bildung &amp; Enablement</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">03/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">LCBIT – Low-Code Blockchain Integration Toolkit</p>
+        <h3>Blockchain Anwendungen mit Low Code entwickeln</h3>
+        <p class="desc">LCBIT erweitert Low Code Werkzeuge um Blockchain Module und Schnittstellen. Damit sollen Anwendungen auch ohne tiefgehende Blockchain Programmierkenntnisse umgesetzt werden können.</p>
+        <div class="contact">
+          <div class="avatar">BH</div>
+          <div>
+            <strong>Dr. Burkhard Heisen / Erik Neumann</strong>
+            <span>Heisenware GmbH / Hochschule Mittweida</span>
+            <a href="mailto:burkhard.heisen@heisenware.com">burkhard.heisen@heisenware.com</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Heisenware GmbH; Hochschule Mittweida; TU Chemnitz – Prof. Dr. Matthias Thürer, Pierre Grzona</p>
+            <p>Hochschule Mittweida: Klins Bitanji</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/lcbit" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Finanz- &amp; Zahlungsinfrastruktur" data-search="like2pay mit krypto zahlen, euro bekommen: blockchain-payment für den alltag michael meisel hochschule mittweida hochschule mittweida; volksbank mittweida – thomas otto, joshua ender like2pay verbindet händlerterminal, app, smart contract und bankanbindung. händler können damit kryptozahlungen annehmen, ohne selbst kryptowährungen handhaben zu müssen. getestet wurden unter anderem polygon sowie bitcoin und lightning. hochschule mittweida: tim käbisch, erik neumann">
+      <div class="visual red">
+        <div class="mesh"></div>
+        <span class="icon">💳</span>
+        <span class="mini-label">Finanz- &amp; Zahlungsinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">11/2023–10/2025</span>
+        </div>
+        <p class="eyebrow">Like2Pay</p>
+        <h3>Mit Kryptowährung zahlen, in Euro abrechnen</h3>
+        <p class="desc">Like2Pay verbindet Händlerterminal, App, Smart Contract und Bankanbindung. Händler können damit Kryptozahlungen annehmen, ohne selbst Kryptowährungen handhaben zu müssen. Getestet wurden unter anderem Polygon sowie Bitcoin und Lightning.</p>
+        <div class="contact">
+          <div class="avatar">MM</div>
+          <div>
+            <strong>Michael Meisel</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:meisel@hs-mittweida.de">meisel@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; Volksbank Mittweida – Thomas Otto, Joshua Ender</p>
+            <p>Hochschule Mittweida: Tim Käbisch, Erik Neumann</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/like2pay" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Laufend" data-category="Industrie &amp; digitale Services" data-search="maintainchain die wartung der zukunft: ar zeigt den weg – blockchain liefert den beweis prof. dr. philipp klimant hochschule mittweida hochschule mittweida; fraunhofer iwu – dr. marco schumann; nsh technology gmbh – dr. thomas koch hochschule mittweida: erik neumann">
+      <div class="visual violet">
+        <div class="mesh"></div>
+        <span class="icon">🛠️</span>
+        <span class="mini-label">Industrie &amp; digitale Services</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status live">Laufend</span>
+          <span class="period">10/2025–12/2026</span>
+        </div>
+        <p class="eyebrow">MaintainChain</p>
+        <h3>Wartung digital begleiten und sicher dokumentieren</h3>
+        <p class="desc">MaintainChain verbindet Remote Wartung mit Augmented Reality, automatischer Erfassung von Arbeitsschritten und einer sicheren Blockchain Dokumentation.</p>
+        <div class="contact">
+          <div class="avatar">PK</div>
+          <div>
+            <strong>Prof. Dr. Philipp Klimant</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:Philipp.Klimant@hs-mittweida.de">Philipp.Klimant@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; Fraunhofer IWU – Dr. Marco Schumann; NSH TECHNOLOGY GmbH – Dr. Thomas Koch</p>
+            <p>Hochschule Mittweida: Erik Neumann</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/maintainchain" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+        <a class="project-link" href="https://youtu.be/NH61hOejEdQ" target="_blank" rel="noopener">
+          Projektvideo ansehen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Industrie &amp; digitale Services" data-search="mobility4all mobilität teilen statt besitzen: neue wege für den ländlichen raum prof. dr.-ing. ralf hartig hochschule mittweida hochschule mittweida / ifem; bloxmove gmbh">
+      <div class="visual violet">
+        <div class="mesh"></div>
+        <span class="icon">🚐</span>
+        <span class="mini-label">Industrie &amp; digitale Services</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2021–01/2023</span>
+        </div>
+        <p class="eyebrow">Mobility4All</p>
+        <h3>Neue Mobilitätsangebote für den ländlichen Raum</h3>
+        <p class="desc">Mobility4All untersucht neue digitale Modelle für geteilte Mobilitätsangebote im ländlichen Raum.</p>
+        <div class="contact">
+          <div class="avatar">-R</div>
+          <div>
+            <strong>Prof. Dr.-Ing. Ralf Hartig</strong>
+            <span>Fakultät Wirtschaftsingenieurwesen · Hochschule Mittweida</span>
+            <a href="mailto:hartig@hs-mittweida.de">hartig@hs-mittweida.de</a>
+            <a href="tel:+493727581615">Tel. +49 3727 581615</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida / ifem; bloXmove GmbH</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/mobility4all" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Bildung &amp; Enablement" data-search="opensci wissenschaft ohne paywall-logik: blockchain verändert das publizieren prof. dr. boris nachtsheim universität bremen universität bremen; hochschule mittweida – prof. dr. matthias vodel; tokenforge – markus kluge opensci entwickelt eine digitale plattform, die preprint-server mit fachverlagen als qualitätsinstanzen verbindet. sie verknüpft die bereitstellung wissenschaftlicher vorabveröffentlichungen mit rechteverwaltung, begutachtung und verlagslizenzierung.">
+      <div class="visual yellow">
+        <div class="mesh"></div>
+        <span class="icon">🔬</span>
+        <span class="mini-label">Bildung &amp; Enablement</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">03/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">OpenSci</p>
+        <h3>Wissenschaftliche Publikationen neu organisieren</h3>
+        <p class="desc">OpenSci entwickelt eine digitale Plattform, die Preprint-Server mit Fachverlagen als Qualitätsinstanzen verbindet. Sie verknüpft die Bereitstellung wissenschaftlicher Vorabveröffentlichungen mit Rechteverwaltung, Begutachtung und Verlagslizenzierung.</p>
+        <div class="contact">
+          <div class="avatar">BN</div>
+          <div>
+            <strong>Prof. Dr. Boris Nachtsheim</strong>
+            <span>Universität Bremen</span>
+            <a href="mailto:nachtsh@uni-bremen.de">nachtsh@uni-bremen.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Universität Bremen; Hochschule Mittweida – Prof. Dr. Matthias Vodel; Tokenforge – Markus Kluge</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/opensci" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Digitale Vertrauensinfrastruktur" data-search="snapshots – dezentrale erhebung von nachweisen im internet das internet vergisst – die blockchain nicht: webseiten beweissicher dokumentieren lucas johns hochschule mittweida hochschule mittweida; cgi deutschland b.v. &amp; co. kg – tizian töpfer hochschule mittweida: quinten stampa">
+      <div class="visual blue">
+        <div class="mesh"></div>
+        <span class="icon">📸</span>
+        <span class="mini-label">Digitale Vertrauensinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">03/2024–12/2025</span>
+        </div>
+        <p class="eyebrow">snapshots – dezentrale Erhebung von Nachweisen im Internet</p>
+        <h3>Webseiten zu einem Zeitpunkt beweissicher dokumentieren</h3>
+        <p class="desc">Snapshots erstellt kryptografisch nachweisbare Momentaufnahmen von Webinhalten. Mögliche Anwendungen sind öffentliche Bekanntmachungen und digitale Beweisführung.</p>
+        <div class="contact">
+          <div class="avatar">LJ</div>
+          <div>
+            <strong>Lucas Johns</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:johns@hs-mittweida.de">johns@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; CGI Deutschland B.V. &amp; Co. KG – Tizian Töpfer</p>
+            <p>Hochschule Mittweida: Quinten Stampa</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/snapshots" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+        <a class="project-link" href="https://validity-service.com/de" target="_blank" rel="noopener">
+          Demonstrator öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Finanz- &amp; Zahlungsinfrastruktur" data-search="unico tokenisierte zahlungsansprüche bei leistungsstörungen credit events prof. dr. ronny kunz splainx gmbh splainx gmbh – matthias kramer; hochschule mittweida – michael meisel unico untersucht die tokenisierung von zahlungsansprüchen bei leistungsstörungen (credit events). smart contracts sollen die abwicklung dieser ansprüche automatisieren, sobald die vereinbarten bedingungen eines credit events erfüllt sind.">
+      <div class="visual red">
+        <div class="mesh"></div>
+        <span class="icon">⚙️</span>
+        <span class="mini-label">Finanz- &amp; Zahlungsinfrastruktur</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">11/2023–01/2025</span>
+        </div>
+        <p class="eyebrow">UNICO</p>
+        <h3>Tokenisierte Zahlungsansprüche bei Leistungsstörungen</h3>
+        <p class="desc">UNICO untersucht die Tokenisierung von Zahlungsansprüchen bei Leistungsstörungen (Credit Events). Smart Contracts sollen die Abwicklung dieser Ansprüche automatisieren, sobald die vereinbarten Bedingungen eines Credit Events erfüllt sind.</p>
+        <div class="contact">
+          <div class="avatar">RK</div>
+          <div>
+            <strong>Prof. Dr. Ronny Kunz</strong>
+            <span>splainX GmbH</span>
+            <a href="mailto:r.kunz@splainx.com">r.kunz@splainx.com</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>splainX GmbH – Matthias Kramer; Hochschule Mittweida – Michael Meisel</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/unico" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Industrie &amp; digitale Services" data-search="wir! in der region engagement, das sich auszahlt: blockchain als regionales belohnungssystem prof. dr. matthias vodel hochschule mittweida hochschule mittweida; projektteam u. a. robert manthey, falk schmidsberger, nicole wehner">
+      <div class="visual violet">
+        <div class="mesh"></div>
+        <span class="icon">🤝</span>
+        <span class="mini-label">Industrie &amp; digitale Services</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">09/2020–08/2022</span>
+        </div>
+        <p class="eyebrow">WIR! In der Region</p>
+        <h3>Engagement in der Region digital unterstützen</h3>
+        <p class="desc">WIR! In der Region entwickelt ein digitales Anreizsystem für freiwilliges Engagement von Bürgerinnen, Bürgern und Unternehmen in Mittweida.</p>
+        <div class="contact">
+          <div class="avatar">MV</div>
+          <div>
+            <strong>Prof. Dr. Matthias Vodel</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:vodel@hs-mittweida.de">vodel@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida; Projektteam u. a. Robert Manthey, Falk Schmidsberger, Nicole Wehner</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/wir-in-der-region" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+    <article class="project-card" data-status="Abgeschlossen" data-category="Industrie &amp; digitale Services" data-search="xbloks fair play auf der blockchain: manipulationsschutz für den esports-markt prof. dr. marc ritter hochschule mittweida hochschule mittweida – prof. dr. christian roschke, claudia hösel">
+      <div class="visual violet">
+        <div class="mesh"></div>
+        <span class="icon">🎮</span>
+        <span class="mini-label">Industrie &amp; digitale Services</span>
+      </div>
+      <div class="card-body">
+        <div class="meta-row">
+          <span class="status done">Abgeschlossen</span>
+          <span class="period">01/2021–03/2023</span>
+        </div>
+        <p class="eyebrow">xBloks</p>
+        <h3>Integrität und Fairness im eSports sichern</h3>
+        <p class="desc">xBloks untersucht Blockchain Technik für Integrität, Authentizität und Manipulationsschutz im eSports Umfeld.</p>
+        <div class="contact">
+          <div class="avatar">MR</div>
+          <div>
+            <strong>Prof. Dr. Marc Ritter</strong>
+            <span>Hochschule Mittweida</span>
+            <a href="mailto:ritter@hs-mittweida.de">ritter@hs-mittweida.de</a>
+          </div>
+        </div>
+        <details>
+          <summary>Partner &amp; Details <span>+</span></summary>
+          <div class="details-body">
+            <p><b>Beteiligte Partner</b><br>Hochschule Mittweida – Prof. Dr. Christian Roschke, Claudia Hösel</p>
+          </div>
+        </details>
+        <a class="project-link" href="https://blockchain-mittweida.com/xbloks" target="_blank" rel="noopener">
+          Projektvorstellung öffnen <span class="arrow">↗</span>
+        </a>
+      </div>
+    </article>
+    
+</div>
+<div class="no-results" id="empty"><h2>Keine Treffer</h2><p>Versuche einen anderen Suchbegriff oder Filter.</p></div>
+</section>
+
+
+
+
+</div>
+
+
+<div id="tab-partner" class="tab-panel partner-tab">
+  <section class="partner-hero"><div class="wrap">
+    <div class="partner-kicker">Das WIR! Bündnis</div>
+    <h1 class="partner-title">Gemeinsam für Blockchain aus Mittweida.</h1>
+    <p class="partner-lead">Die Stadt Mittweida, die Hochschule Mittweida und die Volksbank Mittweida bilden den Kern des Bündnisses. Gemeinsam machen sie Anwendungen der Blockchain Technologie sichtbar, unterstützen neue Projekte und verbinden Forschung, Wirtschaft und Region.</p>
+  </div></section>
+
+  <section class="wrap">
+    <div class="partner-grid">
+      <article class="partner-card">
+        <div class="partner-logo-box"><img src="images/Stadt-Mittweida_Wappen-mit-Schriftzug_transparent_klein.png" alt="Stadt Mittweida"></div>
+        <h2>Stadt Mittweida</h2>
+        <p><strong>MWE GmbH</strong></p>
+        <p>Die Stadt Mittweida begleitet das Bündnis über die MWE GmbH und unterstützt Kommunikation, Netzwerkpflege und den Transfer in die Region.</p>
+        <a class="partner-more" href="https://www.mittweida.de/" target="_blank" rel="noopener">Stadt Mittweida öffnen ↗</a>
+      </article>
+
+      <article class="partner-card">
+        <div class="partner-logo-box"><img src="images/1200px-HSM-Logo_2008.svg_.png" alt="Hochschule Mittweida"></div>
+        <h2>Hochschule Mittweida</h2>
+        <p><strong>Blockchain Competence Center Mittweida (BCCM)</strong></p>
+        <p>Das BCCM bringt Forschung, technologische Entwicklung und wissenschaftliche Expertise in das Bündnis ein und begleitet zahlreiche Umsetzungsprojekte.</p>
+        <a class="partner-more" href="https://www.hs-mittweida.de/" target="_blank" rel="noopener">Hochschule Mittweida öffnen ↗</a>
+      </article>
+
+      <article class="partner-card">
+        <div class="partner-logo-box"><img src="images/logo-volksbank.png" alt="Volksbank Mittweida"></div>
+        <h2>Volksbank Mittweida</h2>
+        <p><strong>Partner für Finanzinnovation</strong></p>
+        <p>Die Volksbank Mittweida verbindet das Bündnis mit Praxisfragen aus Finanzwirtschaft, digitalen Assets, Zahlungsverkehr und regionaler Unternehmensentwicklung.</p>
+        <a class="partner-more" href="https://www.volksbank-mittweida.de/" target="_blank" rel="noopener">Volksbank Mittweida öffnen ↗</a>
+      </article>
+    </div>
+
+    <div class="partner-mission">
+      <h2>Unser gemeinsames Ziel</h2>
+      <p>Die Blockchain Schaufensterregion Mittweida macht Anwendungen der Blockchain Technologie sichtbar und erlebbar. Die Region soll als Ort für Forschung, praktische Erprobung und neue Geschäftsmodelle weiterentwickelt werden. Das Bündnis verbindet dafür Unternehmen, Wissenschaft, Verwaltung und weitere Partner.</p>
+      <p><strong>Ansprechpartner:</strong> Matthias Eberlein, Geschäftsführer MWE GmbH · Tel. +49 3727 9760 · <a href="mailto:info@blockchain-mittweida.com">info@blockchain-mittweida.com</a></p>
+    </div>
+  </section>
+
+<section class="info-sections" id="kontakt">
+  <div class="info-card">
+    <h2>Kontakt</h2>
+    <p>Sie möchten mehr über ein Projekt erfahren, eine Zusammenarbeit anstoßen oder haben eine allgemeine Anfrage zur Blockchain Schaufensterregion Mittweida?</p>
+
+    <h3>Ansprechpartner</h3>
+    <p><strong>Matthias Eberlein</strong><br>
+    Geschäftsführer MWE GmbH<br>
+    Tel. +49 3727 9760<br>
+    <a href="mailto:info@blockchain-mittweida.com">info@blockchain-mittweida.com</a></p>
+
+    <form class="contact-form" action="https://blockchain-mittweida.com/kontakt/" method="get">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+      </div>
+      <div>
+        <label for="email">E Mail Adresse</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+      </div>
+      <div>
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <button type="submit">Zum Kontaktformular</button>
+    </form>
+    
+    <div class="legal-links">
+      <a href="https://blockchain-mittweida.com/kontakt/" target="_blank" rel="noopener">Kontaktseite öffnen ↗</a>
+    </div>
+  </div>
+
+  <div class="info-card" id="impressum">
+    <h2>Impressum</h2>
+    <p><strong>MWE GmbH</strong><br>
+    Leipziger Str. 27<br>
+    09648 Mittweida</p>
+    <p>Telefon: 03727 976 0<br>
+    E Mail: <a href="mailto:info@mwe-mittweida.de">info@mwe-mittweida.de</a><br>
+    Umsatzsteueridentifikationsnummer: DE141209837</p>
+
+    <h3>Haftung für Inhalte</h3>
+    <p>Die Inhalte der Website werden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität kann dennoch keine Gewähr übernommen werden. Für eigene Inhalte gelten die allgemeinen gesetzlichen Bestimmungen.</p>
+
+    <h3>Haftung für Links</h3>
+    <p>Für Inhalte externer Websites sind die jeweiligen Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Verlinkungen entfernt.</p>
+
+    <h3>Urheberrecht</h3>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Nutzungen außerhalb der gesetzlichen Grenzen bedürfen der Zustimmung des jeweiligen Rechteinhabers.</p>
+
+    <h3>Datenschutz</h3>
+    <p>Die vollständige Datenschutzerklärung wird auf der offiziellen Website bereitgestellt. Sie enthält die jeweils aktuellen Informationen zur Verarbeitung personenbezogener Daten und zu eingesetzten Diensten.</p>
+
+    <div class="legal-links">
+      <a href="https://blockchain-mittweida.com/impressum/" target="_blank" rel="noopener">Vollständiges Impressum ↗</a>
+      <a href="https://blockchain-mittweida.com/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutzerklärung ↗</a>
+    </div>
+  </div>
+</section>
+</div>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div class="footer-main">Blockchain Schaufensterregion Mittweida · <a href="mailto:info@blockchain-mittweida.com">info@blockchain-mittweida.com</a></div>
+      <div class="footer-links">
+        <a href="https://blockchain-mittweida.com/kontakt/" target="_blank" rel="noopener">Kontakt</a>
+        <a href="https://blockchain-mittweida.com/impressum/" target="_blank" rel="noopener">Impressum</a>
+        <a href="https://blockchain-mittweida.com/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a>
+      </div>
+    </div>
+    <div class="funding-wrap">
+      <img class="funding-logo" src="images/funding-logo.png" alt="WIR! Wandel durch Innovation in der Region">
+      <div class="funding-text">Gefördert durch das Bundesministerium für Forschung, Technologie und Raumfahrt (BMFTR) im Rahmen des Programms „WIR! – Wandel durch Innovation in der Region“ unter dem Förderkennzeichen <strong>03WIR1324</strong>.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const cards=[...document.querySelectorAll('.project-card')];
+const buttons=[...document.querySelectorAll('.filter-btn')];
+const search=document.getElementById('search');
+const empty=document.getElementById('empty');
+let active={type:'category',value:'all'};
+
+function apply(){
+  const q=search.value.trim().toLowerCase();
+  let visible=0;
+  cards.forEach(card=>{
+    const matchText=!q || card.dataset.search.includes(q);
+    const matchFilter=active.value==='all' || card.dataset[active.type]===active.value;
+    const show=matchText && matchFilter;
+    card.style.display=show?'':'none';
+    if(show) visible++;
+  });
+  empty.style.display=visible?'none':'block';
+}
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+  buttons.forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(btn.dataset.status) active={type:'status',value:btn.dataset.status};
+  else active={type:'category',value:btn.dataset.category};
+  apply();
+}));
+search.addEventListener('input',apply);
+</script>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + target).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+</script>
+
+
+</body></html>
